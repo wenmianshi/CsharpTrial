@@ -30,6 +30,40 @@ internal class Program
             return;
         }
 
+        // Creating table clients
+        NpgsqlCommand command = new NpgsqlCommand(
+            @"CREATE TABLE IF NOT EXISTS characters(
+            characterid serial PRIMARY KEY,
+            firstName text,
+            lastName text,
+            dateofbirth date,
+            image text
+            )",
+            currentConnection);
+
+        NpgsqlDataReader dataReader = command.ExecuteReader();
+        dataReader.Close();
+
+        // Check if table clients exists now
+        command.CommandText = @"SELECT EXISTS (
+        SELECT FROM 
+            pg_tables
+        WHERE 
+            schemaname = 'public' AND 
+            tablename  = 'characters'
+        );";
+        dataReader = command.ExecuteReader();
+        if (dataReader.Read() && dataReader.GetBoolean(0))
+        {
+            Console.WriteLine("Table characters exists.");
+        }
+        else
+        {
+            Console.WriteLine("Table characters doesn't exist. Stopping program.");
+            return;
+        }
+        dataReader.Close();
+
         // Close databases physical connection
         currentConnection.Close();
     }
