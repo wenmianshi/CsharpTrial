@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Starlight Berries",
+    "saturation_factor": 0.7,
+    "type": "fruit"
+  },
+  {
+    "name": "Phoenix Wing",
+    "saturation_factor": 0.9,
+    "type": "meat"
+  },
+  {
+    "name": "Elderwood Greens",
+    "saturation_factor": 0.6,
+    "type": "vegetable"
+  },
+  {
+    "name": "Dragonfruit",
+    "saturation_factor": 0.8,
+    "type": "fruit"
+  },
+  {
+    "name": "Wyvern Steak",
+    "saturation_factor": 0.8,
+    "type": "meat"
+  },
+  {
+    "name": "Moonlit Mushrooms",
+    "saturation_factor": 0.5,
+    "type": "vegetable"
+  },
+  {
+    "name": "Frost Apple",
+    "saturation_factor": 0.6,
+    "type": "fruit"
+  },
+  {
+    "name": "Golem Greens",
+    "saturation_factor": 0.7,
+    "type": "vegetable"
+  },
+  {
+    "name": "Basilisk Breast",
+    "saturation_factor": 0.9,
+    "type": "meat"
+  },
+  {
+    "name": "Faerie Fruits",
+    "saturation_factor": 0.5,
+    "type": "fruit"
+  }
+]
